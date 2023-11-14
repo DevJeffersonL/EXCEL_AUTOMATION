@@ -53,4 +53,4 @@ objTextFile.Close
 ' Play a system sound without showing PowerShell window
 objShell.Run "powershell [System.Media.SystemSounds]::Asterisk.Play()", 0, True
 
-WScript.Echo "Data appended to Excel file."
+WScript.Echo "COMPLETED!!!"

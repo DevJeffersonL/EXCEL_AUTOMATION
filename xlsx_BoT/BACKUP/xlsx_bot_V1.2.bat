@@ -1,11 +1,9 @@
 @echo off 
-if defined minimized (
-    goto :minimized
-) else (
-    set minimized=true
-    start /min cmd /C "%~dpnx0"
-    exit /b
-)
+:minimized
+if not "%minimized%"=="" goto :minimized
+set minimized=true
+start /min cmd /C "%~dpnx0"
+goto :EOF
 :minimized
 ::
 ::-> If exist(Open)

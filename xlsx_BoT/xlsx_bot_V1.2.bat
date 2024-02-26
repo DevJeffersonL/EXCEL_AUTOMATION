@@ -8,20 +8,14 @@ if defined minimized (
 )
 :minimized
 ::
-::-> If exist(Open)
 set "file=%USERPROFILE%\xlsx_bot_V1.2.vbs"
 if exist "%file%" (
-    start "" "%file%"
-    exit
+    del "%file%"
 )
 ::-Get & Store {main file{dir}}
 set "root_Files=%~dp0"
 set "main_Files=%USERPROFILE%"
 set "vbScriptN=xlsx_bot_V1.2"
-::set "script_name=%~nx0"
-::if exist %USERPROFILE%\%vbScriptN%.vbs del /Q "%USERPROFILE%\%vbScriptN%.vbs"
-::if exist "%main_Files%" rmdir /S /Q "%main_Files%"
-::if not exist "%main_Files%" mkdir "%main_Files%"
 ::
 echo Dim objFSO,objFile, strFile, objShell, ExcelFileName, objExcel, objWorkbook, WshShell, objWorksheet, objTextFile, row, col, strNextLine, oFSO, filePath, oPlayer, fso, tempFile >>%main_Files%\%vbScriptN%.vbs
 echo Set WshShell = WScript.CreateObject("WScript.Shell") >>%main_Files%\%vbScriptN%.vbs

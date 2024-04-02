@@ -1,0 +1,8 @@
+1. The bot still append data to a row, 
+   which already contain data. 
+   e.g) If a row1 does not contain data, 
+        in C1 but present in C2
+   The bot will still append to c1:R1 and 
+   overrride. 
+
+2. Double coincidence soundw
